@@ -21,7 +21,7 @@ function checkType(value: number | string): "number" | "string" {
   }
   return "string";
 }
-const value = checkType(42);
+const value = checkType("Hello");
 const valueResult = JSON.stringify(value);
 console.log(valueResult);
 
@@ -40,7 +40,7 @@ type Book = {
   author: string;
   publishedYear: number;
 };
-const addReadStatus = (book: Book): Book & { isRead: boolean } => ({
+const toggleReadStatus = (book: Book): Book & { isRead: boolean } => ({
   ...book,
   isRead: true,
 });
@@ -49,7 +49,7 @@ const myBook: Book = {
   author: "Jane Doe",
   publishedYear: 2024,
 };
-const updatedBook = addReadStatus(myBook);
+const updatedBook = toggleReadStatus(myBook);
 console.log(updatedBook);
 
 // Problem 6
