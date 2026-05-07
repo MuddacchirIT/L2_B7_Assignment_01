@@ -1,5 +1,4 @@
 // Problem 1:
-
 function filterEvenNumbers(numbers: number[]): number[] {
   return numbers.filter((num) => num % 2 === 0);
 }
@@ -8,7 +7,6 @@ const evenDigits = filterEvenNumbers(allDigits);
 console.log(evenDigits);
 
 // Problem 2
-
 function reverseString(str: string): string {
   return str.split("").reverse().join("");
 }
@@ -17,7 +15,6 @@ const result = JSON.stringify(reverseString(normally));
 console.log(result);
 
 // Problem 3
-
 function checkType(value: number | string): "number" | "string" {
   if (typeof value === "number") {
     return "number";
@@ -29,7 +26,6 @@ const valueResult = JSON.stringify(value);
 console.log(valueResult);
 
 // Problem 4
-
 function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
 }
@@ -39,7 +35,6 @@ const resultName = JSON.stringify(nameFind);
 console.log(resultName);
 
 // Problem 5
-
 type Book = {
   title: string;
   author: string;
@@ -58,7 +53,6 @@ const updatedBook = addReadStatus(myBook);
 console.log(updatedBook);
 
 // Problem 6
-
 class Person {
   name: string;
   age: number;
@@ -86,7 +80,6 @@ const student = new Student("Alice", 30, "A");
 student.getDetails();
 
 // Problem 7
-
 const getIntersection = <T>(arr1: T[], arr2: T[]): T[] => {
   return arr1.filter((item) => arr2.includes(item));
 };
